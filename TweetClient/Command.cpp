@@ -1,5 +1,7 @@
 #include "Command.h"
 
+#include "Tweet.pb.h"
+
 namespace client {
 
 	void Command::Run()

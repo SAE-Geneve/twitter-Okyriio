@@ -14,7 +14,7 @@
 int main(int ac, char** av) {
 	try
 	{
-		std::string connection_str = "localhost:4242";
+		std::string connection_str = "86.111.137.219";
 		if (ac == 2)
 		{
 			connection_str = av[1];

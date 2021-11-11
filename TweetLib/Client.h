@@ -8,8 +8,8 @@
 #pragma warning(disable: 4996)
 #endif
 #include <grpcpp/channel.h>
-#include "../GrpcLib/Tweet.pb.h"
-#include "../GrpcLib/Tweet.grpc.pb.h"
+#include "Tweet.pb.h"
+#include "Tweet.grpc.pb.h"
 #if defined(_WIN32) || defined(_WIN64)
 #pragma warning(pop)
 #endif

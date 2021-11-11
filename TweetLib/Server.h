@@ -6,12 +6,12 @@
 #pragma warning(disable: 4251)
 #pragma warning(disable: 4996)
 #endif
-#include "../GrpcLib/Tweet.pb.h"
-#include "../GrpcLib/Tweet.grpc.pb.h"
+#include "Tweet.pb.h"
+#include "Tweet.grpc.pb.h"
 #if defined(_WIN32) || defined(_WIN64)
 #pragma warning(pop)
 #endif
-#include "../TweetLib/Storage.h"
+#include "Storage.h"
 
 namespace tweet {
 
