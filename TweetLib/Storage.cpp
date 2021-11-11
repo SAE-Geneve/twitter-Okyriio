@@ -48,14 +48,14 @@ namespace tweet {
 		// Check if this user is already registered in the DB.
 		auto range = followers_.equal_range(it->second);
 		if (std::find_if(range.first, range.second, [name](const auto& value)
-		{
-			return value.second == name;
-		}) == range.second)
+			{
+				return value.second == name;
+			}) == range.second)
 		{
 			followers_.insert({ it->second, name });
 			return true;
 		}
-		return false;
+			return false;
 	}
 
 	const std::vector<TweetValue> Storage::Show(
@@ -83,9 +83,9 @@ namespace tweet {
 				range.first,
 				range.second,
 				[name](const auto& value)
-			{
-				return value.second == name;
-			}) != range.second;
+				{
+					return value.second == name;
+				}) != range.second;
 		}
 		// If the follower is in or this is current user.
 		if (found)
@@ -98,9 +98,9 @@ namespace tweet {
 				tweet_range.second,
 				std::back_inserter(ret),
 				[](const auto& value)
-			{
-				return value.second;
-			});
+				{
+					return value.second;
+				});
 			return ret;
 		}
 		// Not found so return empty vector.
@@ -108,8 +108,8 @@ namespace tweet {
 	}
 
 	bool Storage::Login(
-		const std::string& context, 
-		const std::string& name, 
+		const std::string& context,
+		const std::string& name,
 		const std::string& pass)
 	{
 		std::scoped_lock l(mutex_);
@@ -141,8 +141,8 @@ namespace tweet {
 	}
 
 	bool Storage::Register(
-		const std::string& context, 
-		const std::string& name, 
+		const std::string& context,
+		const std::string& name,
 		const std::string& pass)
 	{
 		std::scoped_lock l(mutex_);
